@@ -1,10 +1,10 @@
 {
-  "name": "chat-example",
+  "name": "image-search",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "description": "full stack JavaScript app that allows you to search for images",
   "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "repository": "image-search-abstraction-layer",
+  "author": "Nick Beaudoin",
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
