@@ -1,0 +1,65 @@
+body {
+    background: #bfbfbf;
+}
+
+/* use to center results pages differently than index */
+.results {
+    padding: 0 30%;
+    background: #f2f2f2;
+}
+
+.container {
+    margin: 0 auto;
+} 
+
+h1 {
+	font-size: 50px;
+	margin: 80px auto;
+	text-align: center;
+}
+
+/* same styles, seperate tags */
+h1, h2, h3 {
+	font-family: luckiest guy;
+	text-shadow: -2px 2px 2px grey;
+}
+
+.user {
+	border-left: 4px solid #4d4d4d;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 1000px;
+}
+
+/* style li inside .user */
+.user li {
+	background-color: #f2f2f2;
+	display: inline-block;
+	font-size: 20px;
+	margin: 0 0 25px 0;
+}
+
+.example {
+	width: 1000px;
+	margin: 50px auto 0 auto;
+}
+
+p {
+	background-color: #ffe6e6;
+	color: #b30000;
+	width: auto;
+	font-size: 20px;
+	/* correct background size */
+	display: inline-block;
+	margin: 10px 0;
+}
+
+
+.me {
+    margin: 100px 0;
+    text-align: center;
+}
+.me a {
+    color: white;
+    text-decoration: none;
+}

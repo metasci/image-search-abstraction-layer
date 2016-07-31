@@ -2,8 +2,45 @@
 <html>
     <head>
         <title><%= title %></title>
+        <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'/>
+		<link href='/main.css' rel='stylesheet' type='text/css'/>
     </head>  
     <body>
-        Wow this site is awesome!
+        <h1>Image Search Abstraction Layer</h1>
+	
+	
+		<div class="user">
+			<h2><%= user %>:</h2>
+			<ol>
+				<li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+				<li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+				<li>I can get a list of the most recently submitted search strings.</li>
+			</ol>
+		</div>
+		
+		<div class="example">
+		    <!-- unnecessary use of ejs for sake of example -->
+			<h2><%= ex %> Usage:</h2>
+			<p>https://image-search-metasci.c9users.io/chocolate</p><br>
+			<p>https://image-search-metasci.c9users.io/chocolate?offset=2</p><br>
+			<p>https://image-search-metasci.c9users.io/latest</p>
+			
+			<h2><%= ex %> Output:</h2>
+			<!-- inline css rules, frowned upon -->
+			<p style="background-color: #f2f2f2; color: black">Looks better with use of JSON viewing browser extention</p>
+			<p>
+		    [{
+            url: "http://images5.fanpop.com/image/photos/30400000/Chocolate-chocolate-30423745-2000-1445.jpg",
+            snippet: "Chocolate - Chocolate Photo (30423745) - Fanpop",
+            thumbnail: "http://ts4.mm.bing.net/th?id=OIP.M260021dcf39fb9414750c41e73df6483o0&pid=15.1",
+            context: "http://www.fanpop.com/clubs/chocolate/images/30423745/title/chocolate-photo"
+            }]
+            </p>
+		</div>
+		
+		<div class="me">
+            <a href="http://metasci.github.io/" target="_blank">By Nick</a>
+        </div>
+		
     </body>
 </html>
