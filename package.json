@@ -1,13 +1,25 @@
 {
-  "name": "image-search",
-  "version": "0.0.0",
-  "description": "full stack JavaScript app that allows you to search for images",
-  "main": "server.js",
-  "repository": "image-search-abstraction-layer",
-  "author": "Nick Beaudoin",
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metasci/image-search-abstraction-layer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metasci/image-search-abstraction-layer/issues"
+  },
+  "homepage": "https://github.com/metasci/image-search-abstraction-layer#readme",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "bing.search": "^1.0.1",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
   }
 }
