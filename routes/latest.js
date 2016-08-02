@@ -3,7 +3,7 @@ module.exports = function(app, db){
     
     app.get("/latest", latest);
     
- 
+  
     // pull latest searches
     function latest(req, res){
         
@@ -19,9 +19,7 @@ module.exports = function(app, db){
             if (doc != null) {
                 array.push(clean(doc));
             } else {
-                res.render('latest', {
-                    result: array
-                });
+                res.json(array);
             }
         });
     }    

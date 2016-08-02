@@ -12,8 +12,9 @@ module.exports = function(app, db){
             
             var query = req.params.query;
             var size = req.query.offset || 10;
-            var key = process.env.API_KEY;
-            var search = new Search(key);
+            // save API_KEY in heroku
+            
+            var search = new Search(process.env.API_KEY);
             
             var history = {
                 term: query,
@@ -31,9 +32,7 @@ module.exports = function(app, db){
                 if(err) throw err;
                 
                 // send array to users browser
-                res.render('api', {
-                    result: results.map(trim)
-                });
+                res.json(results.map(trim));
                 
             });
             

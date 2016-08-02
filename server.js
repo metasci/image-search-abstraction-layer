@@ -17,6 +17,7 @@ app.locals.title = "Image Search";
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('json spaces', 2);
 
 
 // use public directory for stylesheets
@@ -43,15 +44,18 @@ mongo.connect(process.env.MONGOLAB_URI || url, function(err, db){
     routes(app);
     latest(app, db);
     api(app, db);
+
+
+    //start server
+    var port = process.env.PORT || 8080;
+    
+    app.listen(port, function(){
+      console.log("Listening on port " + port + "...");
+    });
+    
 });
 
 
-//start server
-var port = process.env.PORT || 8080;
-
-app.listen(port, function(){
-  console.log("Listening on port " + port + "...");
-});
 
 
 
