@@ -12,10 +12,12 @@ module.exports = function(app, db){
             
             var query = req.params.query;
             var size = req.query.offset || 10;
+            
             // save API_KEY in heroku
-            
+            console.log('**********************BEFORE***********************');
             var search = new Search(process.env.API_KEY);
-            
+            console.log('**********************AFTER***********************');
+
             var history = {
                 term: query,
                 when: new Date().toLocaleDateString()
